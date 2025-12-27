@@ -63,7 +63,8 @@ function App() {
 
     // Socket connection
     useEffect(() => {
-        const socket = io('http://localhost:3001', {
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+        const socket = io(API_URL, {
             transports: ['websocket', 'polling']
         })
 
@@ -96,7 +97,8 @@ function App() {
         if (!connected && loading) {
             const fetchData = async () => {
                 try {
-                    const response = await fetch('http://localhost:3001/api/market')
+                    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+                    const response = await fetch(`${API_URL}/api/market`)
                     const data = await response.json()
                     if (data.indices) setMarketData(data.indices)
                     if (data.stocks) setStocksData(data.stocks)
