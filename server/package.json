@@ -1,0 +1,17 @@
+{
+    "name": "tunisia-stock-server",
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "node --watch index.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "socket.io": "^4.7.2",
+        "cors": "^2.8.5",
+        "axios": "^1.6.2",
+        "cheerio": "^1.0.0-rc.12",
+        "node-cron": "^3.0.3"
+    }
+}
