@@ -1,134 +1,109 @@
-# 🚀 TunisiaStock Dashboard
+# 📊 TunisiaStock Dashboard
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-18.2-61DAFB?style=for-the-badge&logo=react" alt="React">
-  <img src="https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite" alt="Vite">
-  <img src="https://img.shields.io/badge/Socket.io-4.7-010101?style=for-the-badge&logo=socket.io" alt="Socket.io">
-  <img src="https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js" alt="Node.js">
-</p>
+![TunisiaStock Banner](public/screenshot.png)
 
-<p align="center">
-  <strong>Dashboard analytique cyberpunk de la Bourse de Tunis (BVMT) en temps réel</strong>
-</p>
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-18-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Socket.io](https://img.shields.io/badge/Socket.io-4.7-010101?style=for-the-badge&logo=socket.io&logoColor=white)](https://socket.io/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+
+> **Un dashboard boursier cyberpunk en temps réel pour la Bourse de Tunis (BVMT).**  
+> Visualisez le marché tunisien comme jamais auparavant avec des graphiques live, une heatmap sectorielle et des notifications de prix.
 
 ---
 
 ## ✨ Fonctionnalités
 
-- 📊 **Indices en direct** - TUNINDEX et TUNINDEX 20 avec variations
-- 📈 **Graphique temps réel** - Évolution du TunIndex avec Chart.js
-- 🔥 **Heat Map Secteurs** - Performance par secteur animée
-- 📋 **Tableau de cotations** - Tri, recherche, 30+ actions tunisiennes
-- 📰 **News Ticker** - Bandeau défilant des cours
-- 🎨 **Design Cyberpunk** - Néon, glassmorphism, animations
+### 🖥️ Interface & UX
+- **Design Cyberpunk** : Thème néon sombre immersif avec effets de verre et scanlines.
+- **Temps Réel** : Mises à jour via WebSocket toutes les 30 secondes.
+- **Animations Fluides** : Transitions Framer Motion et graphiques interactifs.
+- **Responsive & PWA** : Installable sur mobile, fonctionne hors-ligne.
 
-## 🛠️ Technologies
-
-| Frontend | Backend |
-|----------|---------|
-| React 18 | Node.js + Express |
-| Vite 5 | Socket.io |
-| Chart.js | Cheerio (scraping) |
-| Framer Motion | node-cron |
-
-## 🚀 Installation
-
-### Prérequis
-- Node.js 18+
-- npm ou yarn
-
-### 1. Cloner le projet
-```bash
-git clone https://github.com/your-username/tunisia-stock-dashboard.git
-cd tunisia-stock-dashboard
-```
-
-### 2. Installer les dépendances
-```bash
-# Frontend
-npm install
-
-# Backend  
-cd server && npm install
-```
-
-### 3. Démarrer l'application
-
-**Terminal 1 - Backend :**
-```bash
-cd server
-npm start
-```
-
-**Terminal 2 - Frontend :**
-```bash
-npm run dev
-```
-
-### 4. Ouvrir le dashboard
-Naviguer vers [http://localhost:5173](http://localhost:5173)
-
-## 📁 Structure du projet
-
-```
-bourse/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   ├── LiveChart.jsx      # Graphique TunIndex
-│   │   ├── NewsTicker.jsx     # Bandeau défilant
-│   │   ├── SectorHeatMap.jsx  # Heat map secteurs
-│   │   ├── StatsCards.jsx     # Cards indices
-│   │   └── StockTable.jsx     # Tableau cotations
-│   ├── App.jsx                # Composant principal
-│   ├── index.css              # Thème cyberpunk
-│   └── main.jsx               # Entry point
-├── server/
-│   ├── index.js               # Express + Socket.io
-│   ├── scraper.js             # Web scraper ilboursa
-│   ├── data.js                # Cache + données démo
-│   └── package.json
-├── index.html
-├── vite.config.js
-└── package.json
-```
-
-## 🔧 Configuration
-
-### Intervalle de rafraîchissement
-Dans `server/index.js`, modifier le cron pour ajuster la fréquence :
-
-```javascript
-// Toutes les 30 secondes
-cron.schedule('*/30 * * * * *', async () => {
-  await refreshMarketData()
-})
-```
-
-### Mode démo
-Le serveur génère automatiquement des données de démonstration si le scraping échoue, assurant un dashboard fonctionnel à tout moment.
-
-## ⚠️ Avertissement
-
-> **Utilisation responsable** : Ce projet utilise le web scraping d'ilboursa.com pour un usage éducatif/personnel uniquement. Ne pas utiliser commercialement sans autorisation. Les données sont différées de 15 minutes.
-
-## 🎨 Thème Cyberpunk
-
-Le design s'inspire de l'esthétique cyberpunk avec :
-
-- **Palette néon** : Cyan (#00f5ff), Magenta (#ff00ff), Violet (#bf00ff)
-- **Fond sombre** : Grille animée avec effet scanline
-- **Glassmorphism** : Cartes transparentes avec blur
-- **Animations** : Pulse, flicker, glitch effects
-- **Typographie** : Orbitron, Rajdhani, Share Tech Mono
-
-## 📄 Licence
-
-MIT © 2024
+### 🛠️ Outils Traders
+- **📈 Graphiques Live** : Suivi du TUNINDEX seconde par seconde.
+- **🔥 Heatmap** : Visualisation instantanée des performances sectorielles.
+- **⭐ Watchlist** : Sauvegardez vos actions favorites (persistant localement).
+- **🔔 Alertes** : Recevez des notifications quand un prix atteint votre cible.
+- **📊 Comparateur** : Superposez les courbes de plusieurs actions.
+- **📥 Export** : Téléchargez les données en PDF, Excel ou CSV.
 
 ---
 
-<p align="center">
-  Développé avec ❤️ pour la communauté financière tunisienne
-</p>
+## 🚀 Installation Locale
+
+1. **Cloner le projet**
+   ```bash
+   git clone https://github.com/sanadzhioua/tunisia-stock-dashboard.git
+   cd tunisia-stock-dashboard
+   ```
+
+2. **Installer les dépendances**
+   ```bash
+   # Backend
+   cd server
+   npm install
+
+   # Frontend
+   cd ..
+   npm install
+   ```
+
+3. **Lancer le projet**
+   Il faut lancer le backend (serveur de données) et le frontend (interface).
+
+   **Terminal 1 (Backend)**
+   ```bash
+   cd server
+   npm start
+   # Lance le serveur sur http://localhost:3001
+   ```
+
+   **Terminal 2 (Frontend)**
+   ```bash
+   npm run dev
+   # Lance l'app sur http://localhost:5173
+   ```
+
+---
+
+## 🌐 Déploiement
+
+Ce projet nécessite deux hébergements : un pour le **Frontend** (Vercel) et un pour le **Backend** (Railway/Render).
+
+### 1️⃣ Backend (API)
+Le backend Node.js doit tourner en permanence.
+1. Forkez ce repo.
+2. Créez un compte sur [Railway](https://railway.app/).
+3. Créez un "New Project" > "Deploy from GitHub repo".
+4. Sélectionnez le dossier `server` comme "Root Directory" dans les settings.
+5. Railway vous donnera une URL (ex: `https://tunisia-stock-api.up.railway.app`).
+
+### 2️⃣ Frontend (React)
+1. Créez un compte sur [Vercel](https://vercel.com).
+2. "New Project" > Importez votre repo GitHub.
+3. Ajoutez une variable d'environnement :
+   `VITE_API_URL` = `votre-url-railway-du-backend`
+4. Déployez !
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsanadzhioua%2Ftunisia-stock-dashboard)
+
+---
+
+## 🏗️ Architecture
+
+- **Frontend** : React, Vite, Framer Motion, Chart.js, Tailwind (custom CSS), Socket.io Client
+- **Backend** : Express, Socket.io, Cheerio (Scraping), Node-cron
+- **Données** : Scrappées depuis ilboursa.com (simulées en cas d'erreur)
+
+---
+
+## 👤 Auteur
+
+**Sanad Zhioua**
+- GitHub: [@sanadzhioua](https://github.com/sanadzhioua)
+
+---
+
+MIT License © 2024 TunisiaStock
