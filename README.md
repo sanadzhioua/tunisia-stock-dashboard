@@ -75,11 +75,12 @@ Ce projet nécessite deux hébergements : un pour le **Frontend** (Vercel) et un
 
 ### 1️⃣ Backend (API)
 Le backend Node.js doit tourner en permanence.
-1. Forkez ce repo.
-2. Créez un compte sur [Railway](https://railway.app/).
-3. Créez un "New Project" > "Deploy from GitHub repo".
-4. Sélectionnez le dossier `server` comme "Root Directory" dans les settings.
-5. Railway vous donnera une URL (ex: `https://tunisia-stock-api.up.railway.app`).
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fsanadzhioua%2Ftunisia-stock-dashboard&envs=PORT&optionalEnvs=PORT)
+
+1. Cliquez sur le bouton ci-dessus (ou forkez le repo).
+2. Railway détectera automatiquement le serveur.
+3. Ajoutez la variable `PORT` = `3001` dans les variables.
+4. Railway vous donnera une URL (ex: `https://tunisia-stock-api.up.railway.app`).
 
 ### 2️⃣ Frontend (React)
 1. Créez un compte sur [Vercel](https://vercel.com).
