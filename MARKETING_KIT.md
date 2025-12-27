@@ -1,16 +1,9 @@
 # 🚀 Kit Marketing - TunisiaStock
 
-Voici tout le contenu prérédigé pour promouvoir ton projet. Copie-colle simplement !
+💼 LinkedIn Post
 
----
 
-## 💼 LinkedIn Post
-
-**Image à utiliser :** `public/screenshot.png`
-
-**Texte :**
-
-🚀 **[Lancement] TunisiaStock : La Bourse de Tunis en mode Cyberpunk**
+🚀 [Lancement] TunisiaStock : La Bourse de Tunis en mode Cyberpunk**
 
 Je suis fier de vous présenter mon dernier projet open-source : un dashboard financier temps réel pour suivre la BVMT.
 
@@ -51,7 +44,7 @@ Code 👉 https://github.com/sanadzhioua/tunisia-stock-dashboard
 ---
 
 ## 👤 GitHub Profile README
-*(À mettre dans le repo `sanadzhioua/sanadzhioua`)*
+
 
 ```markdown
 ### 🚀 Projets du moment
